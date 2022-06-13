@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Time complexity overall slower than sort2
+
+sort2 uses: Merge Sort
+
+How do you know?: Time complexity overall quicker than sort1
+
+sort3 uses: Selection Sort
+
+How do you know?: Time complexity on the same order for sorted vs unsorted data
