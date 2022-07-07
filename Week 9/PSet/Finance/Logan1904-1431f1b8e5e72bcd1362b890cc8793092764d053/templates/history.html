@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="center">
+        <tr>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Shares</th>
+            <th>Date</th>
+        </tr>
+        {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction["symbol"] }}</td>
+                <td>{{ transaction["price"]|usd }}</td>
+                {% if transaction["shares"] > 0 %}
+                    <td>Buy</td>
+                    <td>{{ transaction["shares"] }}</td>
+                {% else %}
+                    <td>Sell</td>
+                    <td>{{ -transaction["shares"] }}</td>
+                {% endif %}
+                <td>{{ transaction["date"] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

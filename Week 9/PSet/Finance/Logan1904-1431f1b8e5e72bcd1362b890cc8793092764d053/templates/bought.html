@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bought
+{% endblock %}
+
+{% block main %}
+    <h1>Stock Bought</h1>
+
+    <table class="center">
+        <tr>
+            <th>Stock:</th>
+            <td>{{ stock["name"] }}</td>
+        </tr>
+        <tr>
+            <th>Symbol:</th>
+            <td>{{ stock["symbol"] }}</td>
+        </tr>
+        <tr>
+            <th>Price:</th>
+            <td>{{ stock["price"]|usd }}</td>
+        </tr>
+        <tr>
+            <th>Shares:</th>
+            <td>{{ shares }}</td>
+        </tr>
+        <tr>
+            <th>Amount Bought:</th>
+            <td>{{ (shares*stock["price"])|usd }}</td>
+        </tr>
+        <tr>
+            <th>Cash Left:</th>
+            <td>{{ cash|usd }}</td>
+        </tr>
+    </table>
+{% endblock %}

@@ -1,0 +1,64 @@
+h4{
+    text-align: right;
+    font-family: Arial;
+}
+
+.site-main .site-banner h3{
+    padding-top: 50%;
+    font-weight: 500;
+}
+
+.banner-image {
+    padding-top: 15%;
+}
+
+.site-main .site-banner .site-title h3::after{
+    content: " ";
+    height: 2px;
+    width: 18vw;
+    background: black;
+    display: inline-block;
+    margin-left: 5%;
+    transform: translateY(-10px);
+}
+
+.site-main .site-banner .site-title h1{
+    font-size: 5rem;
+}
+
+.site-main .site-banner .site-title h4{
+    font-size: 1.5rem;
+}
+
+.button{
+    padding: .8rem 2.2rem;
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+}
+
+.button.primary-button:hover{
+    background: whitesmoke;
+    background-clip: padding-box;
+    color: black;
+}
+
+.button.secondary-button:hover{
+    background-clip: padding-box;
+    color: black;
+    background: whitesmoke;
+}
+
+.card {
+    margin: 100 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+p {
+    color: black;
+}
+
+h5 {
+    color: black;
+}

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="center">
+        <tr>
+            <th>Stock</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total Value</th>
+            <th>Buy More</th>
+        </tr>
+        {% for stock in stocks %}
+            <tr>
+                <td>{{ stock["symbol"] }}</td>
+                <td>{{ count[stock["symbol"]] }}</td>
+                <td>{{ price[stock["symbol"]]|usd }}</td>
+                <td>{{ value[stock["symbol"]]|usd }}</td>
+                <td>
+                    <form action="/buy" method="post">
+                        <div class="mb-3">
+                            <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="# Of Shares" type="number">
+                            <input type="hidden" id="symbol" name="symbol" readonly value="{{ stock["symbol"] }}">
+                            <button class="btn btn-primary" type="submit">Buy</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <table class="center">
+        <tr>
+            <th>Cash</th>
+            <td>{{ cash|usd }}</td>
+        </tr>
+        <tr>
+            <th>Total Stock</th>
+            <td>{{ value.items()|sum(attribute="1")|usd }}</td>
+        </tr>
+        <tr>
+            <th>Grand Total</th>
+            <td>{{ (cash + value.items()|sum(attribute="1"))|usd }}</td>
+        </tr>
+    </table>
+
+{% endblock %}

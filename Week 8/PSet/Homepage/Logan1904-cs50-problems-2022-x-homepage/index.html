@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--Add Boostrap Library-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!--Link CSS style-->
+        <link href="styles.css" rel="stylesheet">
+
+        <!--Link JavaScript script-->
+        <script src="./script/default.js"></script>
+
+        <title>Logan Sritharan</title>
+
+    </head>
+
+    <body>
+        <!--START HEADER-->
+        <header>
+            <!--DROPDOWN MENU FOR THE OTHER PAGES-->
+            <div class="dropdown">
+                <div class="position-relative">
+                    <div class="position-absolute top-0 start-0">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </button>
+                        <ul class="dropdown-menu" area-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="about.html">About</a></li>
+                            <li><a class="dropdown-item" href="projects.html">Projects</a></li>
+                            <li><a class="dropdown-item" href="services.html">Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--DISPLAY CURRENT PAGE-->
+            <h4>Currently on index.html</h4>
+        </header>
+
+        <!--START MAIN AREA-->
+        <main class="site-main">
+
+            <!--START INDEX AREA-->
+            <section class="site-banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 site-title">
+                            <h3 class="title-text">What's up?</h3>
+                            <h1 class="title-text text-uppercase">I am Logan Sritharan</h1>
+                            <div class="site-button">
+                                <button type="button" id="button_cs50" class="btn button primary-button mr-4 text-uppercase">CS50 Homepage</button>
+                                <button type="button" id="button_solutions" class="btn button secondary-button text-uppercase">CS50 Solutions</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 banner-image">
+                            <img src="./img/banner-image.jpg" alt="banner-img" class="img-thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </body>
+</html>

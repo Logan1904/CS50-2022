@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--Add Boostrap Library-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!--Link CSS style-->
+        <link href="styles.css" rel="stylesheet">
+
+        <!--Link JavaScript script-->
+        <script src="./script/default.js"></script>
+
+        <title>Logan Sritharan-About</title>
+
+    </head>
+
+    <body>
+        <!--START HEADER-->
+        <header>
+            <!--DROPDOWN MENU FOR THE OTHER PAGES-->
+            <div class="dropdown">
+                <div class="position-relative">
+                    <div class="position-absolute top-0 start-0">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </button>
+                        <ul class="dropdown-menu" area-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="index.html">Index</a></li>
+                            <li><a class="dropdown-item" href="about.html">About</a></li>
+                            <li><a class="dropdown-item" href="services.html">Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--DISPLAY CURRENT PAGE-->
+            <h4>Currently on projects.html</h4>
+        </header>
+
+        <!--START MAIN AREA-->
+        <main class="site-main">
+
+            <!--START PROJECTS AREA-->
+            <section class="projects-area">
+                <div class="card-group">
+                    <div class="card">
+                      <img src="./img/HPC.png" class="card-img-top" alt="HPC Coursework">
+                      <div class="card-body">
+                        <h5 class="card-title">High-Performance Computing</h5>
+                        <p class="card-text">A parallel (up to 64 threads) numerical code for solving the 2D Barkley Model Reaction-Diffusion system of Partial Differential Equations</p>
+                        <p class="card-text"><small class="text-muted">C++, OpenMP</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./img/FYP.png" class="card-img-top" alt="FYP Project">
+                      <div class="card-body">
+                        <h5 class="card-title">Distributed Optimization for Multi-Agent Systems for Exploration and Trajectory Planning</h5>
+                        <p class="card-text">A novel hierarchical control apporach for the real-time exploration of an environment using predictive control. This simulation utilises a non-convex non-differentiable control strategy for fast area coverage of a swarm of Micro Aerial Vehicles (MAVs), which is optimized using a Mesh Adaptive Direct Search algorithm.</p>
+                        <p class="card-text"><small class="text-muted">Julia</small></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./img/urop.jpeg" class="card-img-top" alt="UROP Project">
+                      <div class="card-body">
+                        <h5 class="card-title">Calculation of Momentum and Displacement Thicknesses for NekPy</h5>
+                        <p class="card-text">Development of a Python wrapper NekPy for the Computational Fluid Dynamics Software Nektar++ for non-expert users of C++. Python classes were implemented to calculate the momentum and displacement thicknessess of any arbitrary flow problem along the edge of a wall/</p>
+                        <p class="card-text"><small class="text-muted">Python</small></p>
+                      </div>
+                    </div>
+            </section>
+
+        </main>
+
+    </body>
+</html>

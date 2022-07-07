@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // Run script as soon as DOM is loaded
+            document.addEventListener("DOMContentLoaded", function() {
+
+                // Change button color to green when correct one is selected
+                let correct = document.querySelector(".right");
+                correct.addEventListener("click", function() {
+                    correct.style.backgroundColor = "green";
+                    document.querySelector("#feedback").innerHTML = "Correct!";
+                });
+
+                // Change button color to red when any incorrect one is selected
+                let incorrect = document.querySelectorAll(".wrong");
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener("click", function() {
+                        incorrect[i].style.backgroundColor = "red";
+                        document.querySelector("#feedback").innerHTML = "Incorrect";
+                    });
+                }
+
+                // Check response submission
+                document.querySelector("#checker").addEventListener("click", function() {
+                    let text = document.querySelector("input");
+
+                    if (text.value.toLowerCase() == "switzerland") {
+                        text.style.backgroundColor = "green";
+                        document.querySelector("#text_feedback").innerHTML = "Correct!";
+                    } else {
+                        text.style.backgroundColor = "red";
+                        document.querySelector("#text_feedback").innerHTML = "Incorrect";
+                    }
+                });
+
+            });
+
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <h3>What animal is the breed "Doberman"?</h4>
+
+                <button class="wrong">Horse</button>
+                <button class="right">Dog</button>
+                <button class="wrong">Cat</button>
+                <button class="wrong">Mouse</button>
+
+                <p id="feedback"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+
+                <input>
+                <button id="checker">Check Answer</button>
+
+                <p id="text_feedback"></p>
+
+            </div>
+        </div>
+    </body>
+</html>
